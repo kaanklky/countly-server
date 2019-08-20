@@ -70,7 +70,7 @@ yum install -y yum-utils
 # the latest RPM directly if the package isn't available there. For further details:
 # https://productforums.google.com/forum/#!topic/chrome/xNtfk_wAUC4;context-place=forum/chrome
 yumdownloader google-chrome-stable || \
-    wget ${dl_google-chrome-stable_url}
+    wget ${dl_google_chrome_stable_url}
 rpm_file=$(echo *.rpm)
 echo "Downloaded ${rpm_file}"
 
