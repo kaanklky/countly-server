@@ -39,9 +39,9 @@
 # Define some global variables.
 working_directory="/tmp/google-chrome-installation"
 if ping -c 1 google.com >> /dev/null 2>&1; then
-    dl_google-chrome-stable_url="https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
+    dl_google_chrome_stable_url="https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm"
 else
-    dl_google-chrome-stable_url="http://countly-1252600587.cos.ap-guangzhou.myqcloud.com/google-chrome-stable_current_x86_64.rpm"
+    dl_google_chrome_stable_url="http://countly-1252600587.cos.ap-guangzhou.myqcloud.com/google-chrome-stable_current_x86_64.rpm"
 fi
 
 
