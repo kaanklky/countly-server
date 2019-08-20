@@ -52,7 +52,7 @@ pushd ${working_directory}
 echo "Configuring the Google Chrome repo in ${repo_file}"
 echo "[google-chrome]" > $repo_file
 echo "name=google-chrome" >> $repo_file
-echo "baseurl=http://dl.google.com/linux/chrome/rpm/stable/\$basearch" >> $repo_file
+echo "baseurl=https://dl.google.com/linux/chrome/rpm/stable/\$basearch" >> $repo_file
 echo "enabled=1" >> $repo_file
 echo "gpgcheck=1" >> $repo_file
 echo "gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub" >> $repo_file
