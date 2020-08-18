@@ -98,19 +98,8 @@ useradd www-data
 unalias cp
 set -e
 
-#install supervisor
-yum -y install python-setuptools
-yum install -y epel-release
-
-yum install -y ShellCheck
-
-if grep -q -i "release 6" /etc/redhat-release ; then
-    bash "$DIR/scripts/install-python27.sh"
-else
-    yum install -y python-pip
-    pip install pip --upgrade
-    yum install -y python-meld3
-    pip install supervisor --ignore-installed meld3
+if grep -q -i "release 8" /etc/redhat-release ; then
+    chown -R www-data:www-data /var/lib/nginx
 fi
 
 #install sendmail
