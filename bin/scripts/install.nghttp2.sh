@@ -23,7 +23,7 @@ elif [ -n "$(command -v yum)" ]; then
         yum install -y python3-setuptools make perl
     else
         if grep -q -i "release 6" /etc/redhat-release ; then
-            wget https://rpmfind.net/linux/Mandriva/devel/cooker/x86_64/media/main/release/autoconf-2.69-1-mdv2012.0.noarch.rpm
+            wget http://ftp.nluug.nl/os/Linux/distr/Mandrivalinux/devel/cooker/x86_64/media/main/release/autoconf-2.69-1-mdv2012.0.noarch.rpm
             rpm -i --force autoconf-2.69-1-mdv2012.0.noarch.rpm
             rm -f autoconf-2.69-1-mdv2012.0.noarch.rpm
             # wget https://www.softwarecollections.org/en/scls/praiskup/autotools/epel-6-x86_64/download/praiskup-autotools-epel-6-x86_64.noarch.rpm
