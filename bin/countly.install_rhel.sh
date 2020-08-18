@@ -28,11 +28,11 @@ if grep -q -i "release 8" /etc/redhat-release ; then
     yum -y install python3-setuptools
     yum -y install python3-policycoreutils
 
-    ln -s /usr/local/bin/echo_supervisord_conf /usr/bin/echo_supervisord_conf
-    ln -s /usr/local/bin/pidproxy /usr/bin/pidproxy
-    ln -s /usr/local/bin/shellcheck /usr/bin/shellcheck
-    ln -s /usr/local/bin/supervisorctl /usr/bin/supervisorctl
-    ln -s /usr/local/bin/supervisord /usr/bin/supervisord
+    ln -sf /usr/local/bin/echo_supervisord_conf /usr/bin/echo_supervisord_conf
+    ln -sf /usr/local/bin/pidproxy /usr/bin/pidproxy
+    ln -sf /usr/local/bin/shellcheck /usr/bin/shellcheck
+    ln -sf /usr/local/bin/supervisorctl /usr/bin/supervisorctl
+    ln -sf /usr/local/bin/supervisord /usr/bin/supervisord
 else
     if grep -q -i "release 6" /etc/redhat-release ; then
         #install nginx
