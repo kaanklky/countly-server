@@ -108,6 +108,7 @@ service sendmail start
 
 #install grunt & npm modules
 ( cd "$DIR/.." ;  sudo npm install npm@6.4.1 -g; npm --version;  sudo npm install -g grunt-cli --unsafe-perm ; sudo npm install --unsafe-perm )
+( cd "$DIR/.." && sudo npm install argon2 --build-from-source)
 
 #install numactl
 yum install numactl -y
