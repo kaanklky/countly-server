@@ -15,6 +15,22 @@ yum -y install wget openssl-devel make git sqlite unzip bzip2
 
 if grep -q -i "release 8" /etc/redhat-release ; then
     yum -y group install "Development Tools"
+
+    yum -y install epel-release
+    # see https://github.com/koalaman/shellcheck/issues/1871
+    curl -Of https://github.com/koalaman/shellcheck/releases/download/v0.7.1/shellcheck-v0.7.1.linux.x86_64.tar.xz
+    tar -C /usr/local/bin/ -xf shellcheck-v0.7.1.linux.x86_64.tar.xz --no-anchored 'shellcheck' --strip=1
+
+    yum install -y python3-pip
+    pip3 install pip --upgrade
+    yum install -y python3-meld3
+    pip3 install supervisor --ignore-installed meld3
+    yum -y install python3-setuptools
+    yum -y install python3-policycoreutils
+
+    echo "PATH=$PATH:/usr/local/bin
+export PATH" >> ~/.bashrc
+else
     if grep -q -i "release 6" /etc/redhat-release ; then
         #install nginx
         echo "[nginx]
