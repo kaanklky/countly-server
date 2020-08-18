@@ -18,7 +18,7 @@ if grep -q -i "release 8" /etc/redhat-release ; then
 
     yum -y install epel-release
     # see https://github.com/koalaman/shellcheck/issues/1871
-    curl -Of https://github.com/koalaman/shellcheck/releases/download/v0.7.1/shellcheck-v0.7.1.linux.x86_64.tar.xz
+    wget https://github.com/koalaman/shellcheck/releases/download/v0.7.1/shellcheck-v0.7.1.linux.x86_64.tar.xz
     tar -C /usr/local/bin/ -xf shellcheck-v0.7.1.linux.x86_64.tar.xz --no-anchored 'shellcheck' --strip=1
 
     yum install -y python3-pip
